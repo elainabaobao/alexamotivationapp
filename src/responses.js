@@ -45,7 +45,7 @@ const getNewAchievementIntent = () => {
 const getNewBraveIntent = () => {
     console.log(themes)
     const cardTitle = 'Fact';
-    const speechOutput = 'Here is a fact: ' + brave[0].factName;
+    const speechOutput = 'Here is a fact: ' + brave[1].factName;
     // If the user either does not reply to the welcome message or says something that is not
     // understood, they will be prompted again with this text.
     const repromptText = 'Ask me about x y and z ';
