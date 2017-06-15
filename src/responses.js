@@ -1,5 +1,5 @@
 const {themes} = require('./facts');
-const {space, physics} = themes;
+const {achievement, brave, determination, motivation} = themes;
 const initSessionAttributes = () => {
     // If we wanted to initialize the session to have some attributes we could add those here.
     const sessionAttributes = {};
@@ -7,10 +7,28 @@ const initSessionAttributes = () => {
     return sessionAttributes;
 }
 
-const getFactResponse = () => {
+// const getFactResponse = () => {
+//     console.log(themes)
+//     const cardTitle = 'Fact';
+//     const speechOutput = 'Here is a fact: ' + physics[0].factName;
+//     // If the user either does not reply to the welcome message or says something that is not
+//     // understood, they will be prompted again with this text.
+//     const repromptText = 'Ask me about x y and z ';
+//     const shouldEndSession = false;
+
+//     return Promise.resolve()
+//         .then(_ => [
+//             cardTitle,
+//             speechOutput,
+//             repromptText,
+//             shouldEndSession
+//         ]);   
+// }
+//
+const getNewAchievementIntent = () => {
     console.log(themes)
     const cardTitle = 'Fact';
-    const speechOutput = 'Here is a fact: ' + physics[0].factName;
+    const speechOutput = 'Here is a fact: ' + achievement[0].factName;
     // If the user either does not reply to the welcome message or says something that is not
     // understood, they will be prompted again with this text.
     const repromptText = 'Ask me about x y and z ';
@@ -24,6 +42,66 @@ const getFactResponse = () => {
             shouldEndSession
         ]);   
 }
+const getNewBraveIntent = () => {
+    console.log(themes)
+    const cardTitle = 'Fact';
+    const speechOutput = 'Here is a fact: ' + brave[0].factName;
+    // If the user either does not reply to the welcome message or says something that is not
+    // understood, they will be prompted again with this text.
+    const repromptText = 'Ask me about x y and z ';
+    const shouldEndSession = false;
+
+    return Promise.resolve()
+        .then(_ => [
+            cardTitle,
+            speechOutput,
+            repromptText,
+            shouldEndSession
+        ]);   
+}
+const getNewDeterminationIntent = () => {
+    console.log(themes)
+    const cardTitle = 'Fact';
+    const speechOutput = 'Here is a fact: ' + determination[0].factName;
+    // If the user either does not reply to the welcome message or says something that is not
+    // understood, they will be prompted again with this text.
+    const repromptText = 'Ask me about x y and z ';
+    const shouldEndSession = false;
+
+    return Promise.resolve()
+        .then(_ => [
+            cardTitle,
+            speechOutput,
+            repromptText,
+            shouldEndSession
+        ]);   
+}
+const getNewMotivationIntent = () => {
+    console.log(themes)
+    const cardTitle = 'Fact';
+    const speechOutput = 'Here is a fact: ' + motivation[0].factName;
+    // If the user either does not reply to the welcome message or says something that is not
+    // understood, they will be prompted again with this text.
+    const repromptText = 'Ask me about x y and z ';
+    const shouldEndSession = false;
+
+    return Promise.resolve()
+        .then(_ => [
+            cardTitle,
+            speechOutput,
+            repromptText,
+            shouldEndSession
+        ]);   
+}
+// GetNewFactIntent': function () {
+//         var factArr = data;
+//         var factIndex = Math.floor(Math.random() * factArr.length);
+//         var randomFact = factArr[factIndex];
+//         var speechOutput = GET_FACT_MESSAGE + randomFact;
+//         this.emit(':tellWithCard', speechOutput, SKILL_NAME, randomFact)
+//     },
+
+
 
 const getWelcomeResponse = () => {
     const cardTitle = 'Welcome';
@@ -64,6 +142,14 @@ const intentRequest = (intentRequest, session) => {
     switch (intentName) {
         case 'GetNewFactIntent':
             return getFactResponse();
+        case 'GetNewAchievementIntent':
+            return getNewAchievementIntent();
+        case 'GetNewBraveIntent':
+            return getNewBraveIntent();
+        case 'GetNewDeterminationIntent':
+            return getNewDeterminationIntent();
+        case 'GetNewMotivationIntent':
+            return getNewMotivationIntent();
         case 'AMAZON.StopIntent':
         case 'AMAZON.CancelIntent':
             return getEndResponse();
