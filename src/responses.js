@@ -28,7 +28,7 @@ const initSessionAttributes = () => {
 const getNewAchievementIntent = () => {
     console.log(themes)
     const cardTitle = 'Fact';
-    const speechOutput = 'Here is a fact: ' + achievement[0].factName;
+    const speechOutput = 'Here is a fact: ' + achievement[(Math.floor(Math.random() * achievement.length))].factName;
     // If the user either does not reply to the welcome message or says something that is not
     // understood, they will be prompted again with this text.
     const repromptText = 'Ask me about x y and z ';
@@ -42,10 +42,12 @@ const getNewAchievementIntent = () => {
             shouldEndSession
         ]);   
 }
+
+
 const getNewBraveIntent = () => {
     console.log(themes)
     const cardTitle = 'Fact';
-    const speechOutput = 'Here is a fact: ' + brave[1].factName;
+    const speechOutput = 'Here is a fact: ' + brave[[(Math.floor(Math.random() * brave.length))]].factName;
     // If the user either does not reply to the welcome message or says something that is not
     // understood, they will be prompted again with this text.
     const repromptText = 'Ask me about x y and z ';
@@ -59,10 +61,11 @@ const getNewBraveIntent = () => {
             shouldEndSession
         ]);   
 }
+
 const getNewDeterminationIntent = () => {
     console.log(themes)
     const cardTitle = 'Fact';
-    const speechOutput = 'Here is a fact: ' + determination[0].factName;
+    const speechOutput = 'Here is a fact: ' + determination[[(Math.floor(Math.random() * determination.length))]].factName;
     // If the user either does not reply to the welcome message or says something that is not
     // understood, they will be prompted again with this text.
     const repromptText = 'Ask me about x y and z ';
@@ -79,7 +82,7 @@ const getNewDeterminationIntent = () => {
 const getNewMotivationIntent = () => {
     console.log(themes)
     const cardTitle = 'Fact';
-    const speechOutput = 'Here is a fact: ' + motivation[0].factName;
+    const speechOutput = 'Here is a fact: ' + motivation[[(Math.floor(Math.random() * motivation.length))]].factName;
     // If the user either does not reply to the welcome message or says something that is not
     // understood, they will be prompted again with this text.
     const repromptText = 'Ask me about x y and z ';
