@@ -27,15 +27,15 @@ const initSessionAttributes = () => {
 //
 // const SendSMS = () => {
 //     // Twilio Credentials 
-// var accountSid = 'AC6e7f4a2a9bf740874ce67b65cd3846ef';
-// var authToken = '32bae2b99264f9293e5a7f493b74cb8a';
+// var accountSid = 'x';
+// var authToken = 'x';
  
 // //require the Twilio module and create a REST client 
 // var client = require('twilio')(accountSid, authToken); 
  
 // client.messages.create({ 
-//     to: "+16073728921", 
-//     from: "+16072355401", 
+//       to: "+1111", 
+ //   from: "+1111", 
 //     body: "This is the ship that made the Kessel Run in fourteen parsecs?", 
 //     // body: brave[[(Math.floor(Math.random() * brave.length))]].factName,
 // }, function(err, message) { 
@@ -54,15 +54,15 @@ const initSessionAttributes = () => {
 // }
 const SendSMSAchievement = () => {
     // Twilio Credentials 
-var accountSid = 'AC6e7f4a2a9bf740874ce67b65cd3846ef';
-var authToken = '32bae2b99264f9293e5a7f493b74cb8a';
+// var accountSid = 'x';
+// var authToken = 'x';
  
 //require the Twilio module and create a REST client 
 var client = require('twilio')(accountSid, authToken); 
  
 client.messages.create({ 
-    to: "+16073728921", 
-    from: "+16072355401", 
+   to: "+1111", 
+    from: "+1111", 
     //body: "This is the ship that made the Kessel Run in fourteen parsecs?", 
     body: achievement[[(Math.floor(Math.random() * brave.length))]].factName,
 }, function(err, message) { 
@@ -81,15 +81,15 @@ client.messages.create({
 }
 const SendSMSBrave = () => {
     // Twilio Credentials 
-var accountSid = 'AC6e7f4a2a9bf740874ce67b65cd3846ef';
-var authToken = '32bae2b99264f9293e5a7f493b74cb8a';
+// var accountSid = 'x';
+// var authToken = 'x';
  
 //require the Twilio module and create a REST client 
 var client = require('twilio')(accountSid, authToken); 
  
 client.messages.create({ 
-    to: "+16073728921", 
-    from: "+16072355401", 
+    to: "+1111", 
+    from: "+1111", 
     //body: "This is the ship that made the Kessel Run in fourteen parsecs?", 
     body: brave[[(Math.floor(Math.random() * brave.length))]].factName,
 }, function(err, message) { 
@@ -108,15 +108,15 @@ client.messages.create({
 }
 const SendSMSDetermination = () => {
     // Twilio Credentials 
-var accountSid = 'AC6e7f4a2a9bf740874ce67b65cd3846ef';
-var authToken = '32bae2b99264f9293e5a7f493b74cb8a';
+// var accountSid = 'x';
+// var authToken = 'x';
  
 //require the Twilio module and create a REST client 
 var client = require('twilio')(accountSid, authToken); 
  
 client.messages.create({ 
-    to: "+16073728921", 
-    from: "+16072355401", 
+     to: "+1111", 
+    from: "+1111", 
     //body: "This is the ship that made the Kessel Run in fourteen parsecs?", 
      body: determination[[(Math.floor(Math.random() * brave.length))]].factName,
 }, function(err, message) { 
@@ -135,15 +135,15 @@ client.messages.create({
 }
 const SendSMSMotivation = () => {
     // Twilio Credentials 
-var accountSid = 'AC6e7f4a2a9bf740874ce67b65cd3846ef';
-var authToken = '32bae2b99264f9293e5a7f493b74cb8a';
+// var accountSid = 'x';
+// var authToken = 'x';
  
 //require the Twilio module and create a REST client 
 var client = require('twilio')(accountSid, authToken); 
  
 client.messages.create({ 
-    to: "+16073728921", 
-    from: "+16072355401", 
+    to: "+1111", 
+    from: "+1111", 
     //body: "This is the ship that made the Kessel Run in fourteen parsecs?", 
     body: motivation[[(Math.floor(Math.random() * brave.length))]].factName,
 }, function(err, message) { 
