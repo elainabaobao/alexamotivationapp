@@ -25,6 +25,142 @@ const initSessionAttributes = () => {
 //         ]);   
 // }
 //
+// const SendSMS = () => {
+//     // Twilio Credentials 
+// var accountSid = 'AC6e7f4a2a9bf740874ce67b65cd3846ef';
+// var authToken = '32bae2b99264f9293e5a7f493b74cb8a';
+ 
+// //require the Twilio module and create a REST client 
+// var client = require('twilio')(accountSid, authToken); 
+ 
+// client.messages.create({ 
+//     to: "+16073728921", 
+//     from: "+16072355401", 
+//     body: "This is the ship that made the Kessel Run in fourteen parsecs?", 
+//     // body: brave[[(Math.floor(Math.random() * brave.length))]].factName,
+// }, function(err, message) { 
+//     console.log(message.sid); 
+// });
+//     const repromptText = 'Ask me about x y and z ';
+//     const shouldEndSession = false;
+
+//     return Promise.resolve()
+//         .then(_ => [
+//             cardTitle,
+//             speechOutput,
+//             repromptText,
+//             shouldEndSession
+//         ]);   
+// }
+const SendSMSAchievement = () => {
+    // Twilio Credentials 
+var accountSid = 'AC6e7f4a2a9bf740874ce67b65cd3846ef';
+var authToken = '32bae2b99264f9293e5a7f493b74cb8a';
+ 
+//require the Twilio module and create a REST client 
+var client = require('twilio')(accountSid, authToken); 
+ 
+client.messages.create({ 
+    to: "+16073728921", 
+    from: "+16072355401", 
+    //body: "This is the ship that made the Kessel Run in fourteen parsecs?", 
+    body: achievement[[(Math.floor(Math.random() * brave.length))]].factName,
+}, function(err, message) { 
+    console.log(message.sid); 
+});
+    const repromptText = 'Ask me about x y and z ';
+    const shouldEndSession = false;
+
+    return Promise.resolve()
+        .then(_ => [
+            cardTitle,
+            speechOutput,
+            repromptText,
+            shouldEndSession
+        ]);   
+}
+const SendSMSBrave = () => {
+    // Twilio Credentials 
+var accountSid = 'AC6e7f4a2a9bf740874ce67b65cd3846ef';
+var authToken = '32bae2b99264f9293e5a7f493b74cb8a';
+ 
+//require the Twilio module and create a REST client 
+var client = require('twilio')(accountSid, authToken); 
+ 
+client.messages.create({ 
+    to: "+16073728921", 
+    from: "+16072355401", 
+    //body: "This is the ship that made the Kessel Run in fourteen parsecs?", 
+    body: brave[[(Math.floor(Math.random() * brave.length))]].factName,
+}, function(err, message) { 
+    console.log(message.sid); 
+});
+    const repromptText = 'Ask me about x y and z ';
+    const shouldEndSession = false;
+
+    return Promise.resolve()
+        .then(_ => [
+            cardTitle,
+            speechOutput,
+            repromptText,
+            shouldEndSession
+        ]);   
+}
+const SendSMSDetermination = () => {
+    // Twilio Credentials 
+var accountSid = 'AC6e7f4a2a9bf740874ce67b65cd3846ef';
+var authToken = '32bae2b99264f9293e5a7f493b74cb8a';
+ 
+//require the Twilio module and create a REST client 
+var client = require('twilio')(accountSid, authToken); 
+ 
+client.messages.create({ 
+    to: "+16073728921", 
+    from: "+16072355401", 
+    //body: "This is the ship that made the Kessel Run in fourteen parsecs?", 
+     body: determination[[(Math.floor(Math.random() * brave.length))]].factName,
+}, function(err, message) { 
+    console.log(message.sid); 
+});
+    const repromptText = 'Ask me about x y and z ';
+    const shouldEndSession = false;
+
+    return Promise.resolve()
+        .then(_ => [
+            cardTitle,
+            speechOutput,
+            repromptText,
+            shouldEndSession
+        ]);   
+}
+const SendSMSMotivation = () => {
+    // Twilio Credentials 
+var accountSid = 'AC6e7f4a2a9bf740874ce67b65cd3846ef';
+var authToken = '32bae2b99264f9293e5a7f493b74cb8a';
+ 
+//require the Twilio module and create a REST client 
+var client = require('twilio')(accountSid, authToken); 
+ 
+client.messages.create({ 
+    to: "+16073728921", 
+    from: "+16072355401", 
+    //body: "This is the ship that made the Kessel Run in fourteen parsecs?", 
+    body: motivation[[(Math.floor(Math.random() * brave.length))]].factName,
+}, function(err, message) { 
+    console.log(message.sid); 
+});
+    const repromptText = 'Ask me about x y and z ';
+    const shouldEndSession = false;
+
+    return Promise.resolve()
+        .then(_ => [
+            cardTitle,
+            speechOutput,
+            repromptText,
+            shouldEndSession
+        ]);   
+}
+
 const getNewAchievementIntent = () => {
     console.log(themes)
     const cardTitle = 'Fact';
@@ -153,6 +289,16 @@ const intentRequest = (intentRequest, session) => {
             return getNewDeterminationIntent();
         case 'GetNewMotivationIntent':
             return getNewMotivationIntent();
+        // case 'SendSMS':
+        //     return SendSMS();
+        case 'SendSMSAchievement':
+            return SendSMSAchievement();
+        case 'SendSMSBrave':
+            return SendSMSBrave();
+        case 'SendSMSDetermination':
+            return SendSMSDetermination();
+        case 'SendSMSMotivation':
+            return SendSMSMotivation();
         case 'AMAZON.StopIntent':
         case 'AMAZON.CancelIntent':
             return getEndResponse();
