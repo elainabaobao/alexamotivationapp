@@ -8,9 +8,13 @@
     "watch": "./node_modules/.bin/watchman *.js \"find . -not -name \"*.zip\" -not -name \"*.sh\" -not -name \"*.git*\" | xargs zip dist.zip\"",
     "build": "find . -not -name \"*.zip\" -not -name \"*.sh\" -not -name \"*.git*\" | xargs zip dist.zip"
   },
-  "author": "Mottaqui Karim",
+  "author": "Ling Chen",
   "license": "ISC",
   "devDependencies": {
     "watchman": "^0.1.8"
+  },
+  "dependencies": {
+    "firebase": "^4.1.3",
+    "twilio": "^3.4.0"
   }
 }
